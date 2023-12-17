@@ -23,23 +23,31 @@ public:
 	int getSzerokosc();
 
 	friend Opcje;
+	friend PrzyciskiRuchu;
 };
 
 
 class OknoInformacyjne {
-public:
 	Plansza* plansza;
+public:
 	void wielkoscPopulacji();
 	void aktualnyRozmiarPlanszy();
 };
 
 class Opcje {
-public:
 	Plansza* plansza;
+public:
 	void zmianaRozmiaru(int szer, int wys);
 	void zapis(char nazwaPliku, int ROZMIAR);
 	void wczytaj(const char* nazwaPliku);
 };
 
-class PrzyciskiRuchu {};
+class PrzyciskiRuchu {
+	Plansza* plansza;
+public:
+	bool jedenRuch();
+	bool start();
+	bool stop();
+	bool przyspiesz(int czas);
+};
  
