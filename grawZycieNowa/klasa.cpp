@@ -84,3 +84,19 @@ void OknoInformacyjne::wielkoscPopulacji() {
 void OknoInformacyjne::aktualnyRozmiarPlanszy() {
 	std::cout << "Aktualny rozmiar planszy: " << plansza->getWysokosc() << " x " << plansza->getSzerokosc();
 }
+
+bool PrzyciskiRuchu::jedenRuch() {
+	plansza->nastepnePokolenie();
+}
+
+bool PrzyciskiRuchu::start() {
+	//aktywne jeœli dodamy automatyczne zmiany pokoleñ
+}
+
+bool PrzyciskiRuchu::stop() {
+	//aktywne jeœli dodamy automatyczne zmiany pokoleñ
+}
+
+bool PrzyciskiRuchu::przyspiesz(int czas) {
+	//czas podwójnie przyspieszony
+}
