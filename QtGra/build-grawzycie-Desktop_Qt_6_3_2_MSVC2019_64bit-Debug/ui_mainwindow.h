@@ -10,11 +10,9 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -30,15 +28,17 @@ public:
     QPushButton *moveButton;
     QPushButton *saveButton;
     QPushButton *loadButton;
+    QPushButton *playButton;
+    QPushButton *fasterButton;
+    QPushButton *stopButton;
     QMenuBar *menubar;
-    QMenu *menuGra_w_ycie;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(780, 429);
+        MainWindow->resize(780, 316);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         dateActuall = new QDateEdit(centralwidget);
@@ -46,25 +46,30 @@ public:
         dateActuall->setGeometry(QRect(600, 10, 151, 31));
         moveButton = new QPushButton(centralwidget);
         moveButton->setObjectName(QString::fromUtf8("moveButton"));
-        moveButton->setGeometry(QRect(600, 100, 151, 61));
+        moveButton->setGeometry(QRect(600, 90, 151, 61));
         saveButton = new QPushButton(centralwidget);
         saveButton->setObjectName(QString::fromUtf8("saveButton"));
-        saveButton->setGeometry(QRect(600, 270, 151, 31));
+        saveButton->setGeometry(QRect(600, 170, 151, 31));
         loadButton = new QPushButton(centralwidget);
         loadButton->setObjectName(QString::fromUtf8("loadButton"));
-        loadButton->setGeometry(QRect(600, 310, 151, 61));
+        loadButton->setGeometry(QRect(600, 210, 151, 61));
+        playButton = new QPushButton(centralwidget);
+        playButton->setObjectName(QString::fromUtf8("playButton"));
+        playButton->setGeometry(QRect(650, 50, 51, 24));
+        fasterButton = new QPushButton(centralwidget);
+        fasterButton->setObjectName(QString::fromUtf8("fasterButton"));
+        fasterButton->setGeometry(QRect(710, 50, 41, 24));
+        stopButton = new QPushButton(centralwidget);
+        stopButton->setObjectName(QString::fromUtf8("stopButton"));
+        stopButton->setGeometry(QRect(600, 50, 41, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 780, 21));
-        menuGra_w_ycie = new QMenu(menubar);
-        menuGra_w_ycie->setObjectName(QString::fromUtf8("menuGra_w_ycie"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
-
-        menubar->addAction(menuGra_w_ycie->menuAction());
 
         retranslateUi(MainWindow);
 
@@ -77,7 +82,9 @@ public:
         moveButton->setText(QCoreApplication::translate("MainWindow", "MOVE", nullptr));
         saveButton->setText(QCoreApplication::translate("MainWindow", "SAVE", nullptr));
         loadButton->setText(QCoreApplication::translate("MainWindow", "LOAD", nullptr));
-        menuGra_w_ycie->setTitle(QCoreApplication::translate("MainWindow", "Gra w \305\273ycie", nullptr));
+        playButton->setText(QCoreApplication::translate("MainWindow", ">", nullptr));
+        fasterButton->setText(QCoreApplication::translate("MainWindow", ">>", nullptr));
+        stopButton->setText(QCoreApplication::translate("MainWindow", "I I", nullptr));
     } // retranslateUi
 
 };
