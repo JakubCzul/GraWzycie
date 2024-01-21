@@ -7,7 +7,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     ui->dateActuall->setDate(QDate::currentDate());
+    gameBoard = new GameOfLifeBoard(this);
+    QVBoxLayout *centralLayout = new QVBoxLayout(ui->centralwidget);
+    centralLayout->addWidget(gameBoard);
 }
 
 MainWindow::~MainWindow()
