@@ -9,7 +9,6 @@ GameOfLifeBoard::GameOfLifeBoard(QWidget *parent)
     connect(this, &QTableWidget::cellClicked, this, &GameOfLifeBoard::cellClicked);
     connect(timer, &QTimer::timeout, this, &GameOfLifeBoard::play);
     initializeBoard();
-    timer->start(1000);
 }
 
 void GameOfLifeBoard::initializeBoard() {

@@ -13,13 +13,11 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -31,8 +29,7 @@ public:
     QWidget *centralwidget;
     QLineEdit *lineEdit;
     QListView *infoWindow;
-    QTableWidget *tableWidget;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_2;
     QDateEdit *dateActuall;
     QHBoxLayout *horizontalLayout;
@@ -64,36 +61,30 @@ public:
         infoWindow = new QListView(centralwidget);
         infoWindow->setObjectName(QString::fromUtf8("infoWindow"));
         infoWindow->setGeometry(QRect(10, 590, 741, 131));
-        tableWidget = new QTableWidget(centralwidget);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(30, 140, 901, 421));
-        QFont font1;
-        font1.setStrikeOut(false);
-        tableWidget->setFont(font1);
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(1040, 20, 260, 271));
-        verticalLayout_2 = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(1040, 20, 260, 271));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        dateActuall = new QDateEdit(widget);
+        dateActuall = new QDateEdit(layoutWidget);
         dateActuall->setObjectName(QString::fromUtf8("dateActuall"));
 
         verticalLayout_2->addWidget(dateActuall);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        stopButton = new QPushButton(widget);
+        stopButton = new QPushButton(layoutWidget);
         stopButton->setObjectName(QString::fromUtf8("stopButton"));
 
         horizontalLayout->addWidget(stopButton);
 
-        playButton = new QPushButton(widget);
+        playButton = new QPushButton(layoutWidget);
         playButton->setObjectName(QString::fromUtf8("playButton"));
 
         horizontalLayout->addWidget(playButton);
 
-        fasterButton = new QPushButton(widget);
+        fasterButton = new QPushButton(layoutWidget);
         fasterButton->setObjectName(QString::fromUtf8("fasterButton"));
 
         horizontalLayout->addWidget(fasterButton);
@@ -103,17 +94,17 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        moveButton = new QPushButton(widget);
+        moveButton = new QPushButton(layoutWidget);
         moveButton->setObjectName(QString::fromUtf8("moveButton"));
 
         verticalLayout->addWidget(moveButton);
 
-        saveButton = new QPushButton(widget);
+        saveButton = new QPushButton(layoutWidget);
         saveButton->setObjectName(QString::fromUtf8("saveButton"));
 
         verticalLayout->addWidget(saveButton);
 
-        loadButton = new QPushButton(widget);
+        loadButton = new QPushButton(layoutWidget);
         loadButton->setObjectName(QString::fromUtf8("loadButton"));
 
         verticalLayout->addWidget(loadButton);

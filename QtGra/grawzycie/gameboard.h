@@ -8,6 +8,8 @@ class GameOfLifeBoard : public QTableWidget {
 
 public:
     GameOfLifeBoard(QWidget *parent = nullptr);
+    static const int width = 800;
+    static const int height = 400;
 
 public slots:
     void initializeBoard();
@@ -22,6 +24,7 @@ private slots:
 private:
     int countLiveNeighbors(int row, int column);
     QTimer *timer;
+
 };
 
 #endif // GAMEBOARD_H
