@@ -14,7 +14,7 @@
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -28,7 +28,6 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QLineEdit *lineEdit;
-    QListView *infoWindow;
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_2;
     QDateEdit *dateActuall;
@@ -40,6 +39,7 @@ public:
     QPushButton *moveButton;
     QPushButton *saveButton;
     QPushButton *loadButton;
+    QListWidget *infoWindow;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -58,9 +58,6 @@ public:
         font.setPointSize(48);
         font.setBold(true);
         lineEdit->setFont(font);
-        infoWindow = new QListView(centralwidget);
-        infoWindow->setObjectName(QString::fromUtf8("infoWindow"));
-        infoWindow->setGeometry(QRect(10, 590, 741, 131));
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(1040, 20, 260, 271));
@@ -112,6 +109,13 @@ public:
 
         verticalLayout_2->addLayout(verticalLayout);
 
+        infoWindow = new QListWidget(centralwidget);
+        infoWindow->setObjectName(QString::fromUtf8("infoWindow"));
+        infoWindow->setGeometry(QRect(20, 600, 661, 121));
+        QFont font1;
+        font1.setPointSize(16);
+        font1.setBold(true);
+        infoWindow->setFont(font1);
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

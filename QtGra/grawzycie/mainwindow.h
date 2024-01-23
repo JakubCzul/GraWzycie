@@ -18,11 +18,14 @@ public:
 
 private slots:
     void on_moveButton_clicked();
-
     void on_playButton_clicked();
+    void on_saveButton_clicked();
+    void on_loadButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     GameOfLifeBoard *gameBoard;
+    void updateInfoWindow();
+
 };
 #endif

@@ -10,6 +10,11 @@ public:
     GameOfLifeBoard(QWidget *parent = nullptr);
     static const int width = 800;
     static const int height = 400;
+    QSize getBoardSize() const;
+    int getActiveCellCount() const;
+
+    void saveGame(const QString &fileName);
+    void loadGame(const QString &fileName);
 
 public slots:
     void initializeBoard();
@@ -24,7 +29,8 @@ private slots:
 private:
     int countLiveNeighbors(int row, int column);
     QTimer *timer;
-
+signals:
+    void gameSaved();
 };
 
 #endif // GAMEBOARD_H

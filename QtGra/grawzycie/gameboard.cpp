@@ -2,6 +2,8 @@
 #include <QTimer>
 #include <QVector>
 #include <QDebug>
+#include <QFile>
+#include <QTextStream>
 
 GameOfLifeBoard::GameOfLifeBoard(QWidget *parent)
     : QTableWidget(parent), timer(new QTimer(this))
@@ -92,4 +94,67 @@ int GameOfLifeBoard::countLiveNeighbors(int row, int column) {
         }
     }
     return count;
+}
+
+QSize GameOfLifeBoard::getBoardSize() const {
+    return QSize(rowCount(), columnCount());
+}
+
+int GameOfLifeBoard::getActiveCellCount() const {
+    int activeCount = 0;
+    for (int row=0; row<rowCount(); row++) {
+        for (int col=0; col < columnCount(); col++) {
+            if (item(row, col)->background() == Qt::black) {
+                activeCount++;
+            }
+        }
+    }
+
+    return activeCount;
+}
+
+void GameOfLifeBoard::saveGame(const QString &fileName) {
+    QFile file(fileName);
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&file);
+
+        out<< width << " " <<height <<"\n";
+
+        for (int row = 0; row < rowCount(); row++) {
+            for (int col = 0; col < columnCount(); col++) {
+                out << (item(row, col)->background() == Qt::black ? "1" : "0");
+            }
+            out << "\n";
+        }
+
+        file.close();
+        emit gameSaved();
+    }
+}
+
+void GameOfLifeBoard::loadGame(const QString &fileName) {
+    QFile file(fileName);
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file);
+
+        int loadedWidth, loadedHeight;
+        in >> loadedWidth >> loadedHeight;
+
+        for (int row = 0; row < rowCount(); ++row)
+        {
+            QString rowState;
+            in >> rowState;
+
+            for (int col = 0; col < columnCount(); ++col)
+            {
+                QTableWidgetItem *item = this->item(row, col);
+                if (rowState[col] == '1')
+                    item->setBackground(Qt::black);
+                else
+                    item->setBackground(Qt::white);
+            }
+        }
+
+        file.close();
+    }
 }
