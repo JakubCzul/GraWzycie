@@ -10,12 +10,12 @@ GameOfLifeBoard::GameOfLifeBoard(QWidget *parent)
 {
     connect(this, &QTableWidget::cellClicked, this, &GameOfLifeBoard::cellClicked);
     connect(timer, &QTimer::timeout, this, &GameOfLifeBoard::play);
-    initializeBoard();
+    initializeBoard(widthCells,heightCells);
 }
 
-void GameOfLifeBoard::initializeBoard() {
-    setRowCount(10);
-    setColumnCount(10);
+void GameOfLifeBoard::initializeBoard(int Width,int Height) {
+    setRowCount(Height);
+    setColumnCount(Width);
 
     for (int row = 0; row < rowCount(); row++) {
         for (int col = 0; col < columnCount(); col++) {
@@ -33,6 +33,12 @@ void GameOfLifeBoard::cellClicked(int row, int column) {
 
 void GameOfLifeBoard::play() {
     updateBoard();
+}
+
+void GameOfLifeBoard::setBoardSize(int width, int height) {
+    widthCells = width;
+    heightCells = height;
+    initializeBoard(width, height);
 }
 
 void GameOfLifeBoard::faster() {

@@ -15,6 +15,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    GameOfLifeBoard* getGameBoard() const;
 
 private slots:
     void on_moveButton_clicked();

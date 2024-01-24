@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include"gameboard.h"
 #include "ui_mainwindow.h"
+#include "oknoStart.h"
+#include"ui_oknoStart.h"
 #include <QDateTime>
 #include <QListView>
 #include <QStringListModel>
@@ -8,8 +10,7 @@
 #include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
@@ -77,5 +78,8 @@ void MainWindow::on_loadButton_clicked() {
         gameBoard->loadGame(fileName);
         updateInfoWindow();
     }
+}
+GameOfLifeBoard* MainWindow::getGameBoard() const {
+    return gameBoard;
 }
 
