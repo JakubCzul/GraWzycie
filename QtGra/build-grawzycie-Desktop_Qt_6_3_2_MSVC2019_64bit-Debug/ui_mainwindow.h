@@ -53,11 +53,12 @@ public:
         centralwidget->setAutoFillBackground(true);
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(200, 20, 561, 81));
+        lineEdit->setGeometry(QRect(200, 20, 431, 81));
         QFont font;
         font.setPointSize(48);
         font.setBold(true);
         lineEdit->setFont(font);
+        lineEdit->setReadOnly(true);
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(1040, 20, 260, 271));
