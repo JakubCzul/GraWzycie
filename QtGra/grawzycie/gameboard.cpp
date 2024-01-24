@@ -4,6 +4,8 @@
 #include <QDebug>
 #include <QFile>
 #include <QTextStream>
+#include <time.h>
+#include <iostream>
 
 GameOfLifeBoard::GameOfLifeBoard(QWidget *parent)
     : QTableWidget(parent), timer(new QTimer(this))
@@ -162,5 +164,31 @@ void GameOfLifeBoard::loadGame(const QString &fileName) {
         }
 
         file.close();
+    }
+}
+
+void GameOfLifeBoard::random(){
+    srand( time(NULL) );
+    int rows = rowCount();
+    int cols = columnCount();
+    QVector<QVector<int>> newBoard(rows, QVector<int>(cols, 0));
+    int tester;
+    for (int row = 0; row < rows; ++row) {
+        for (int col = 0; col < cols; ++col) {
+            tester = rand() % 2;
+            if(tester == 0){
+                newBoard[row][col] = 0;
+            }
+            if(tester==1){
+                newBoard[row][col] = 1;
+            }
+        }
+    }
+
+    for (int row = 0; row < rows; ++row) {
+        for (int col = 0; col < cols; ++col) {
+            QTableWidgetItem *item = this->item(row, col);
+            item->setBackground(newBoard[row][col] == 1 ? Qt::black : Qt::white);
+        }
     }
 }

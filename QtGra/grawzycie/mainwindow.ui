@@ -83,6 +83,13 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
+        <widget class="QPushButton" name="randomButton">
+         <property name="text">
+          <string>RANDOM</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="moveButton">
          <property name="text">
           <string>MOVE</string>

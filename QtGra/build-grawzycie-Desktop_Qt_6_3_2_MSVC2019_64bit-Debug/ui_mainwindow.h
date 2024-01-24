@@ -36,6 +36,7 @@ public:
     QPushButton *playButton;
     QPushButton *fasterButton;
     QVBoxLayout *verticalLayout;
+    QPushButton *randomButton;
     QPushButton *moveButton;
     QPushButton *saveButton;
     QPushButton *loadButton;
@@ -92,6 +93,11 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        randomButton = new QPushButton(layoutWidget);
+        randomButton->setObjectName(QString::fromUtf8("randomButton"));
+
+        verticalLayout->addWidget(randomButton);
+
         moveButton = new QPushButton(layoutWidget);
         moveButton->setObjectName(QString::fromUtf8("moveButton"));
 
@@ -134,6 +140,7 @@ public:
         stopButton->setText(QCoreApplication::translate("MainWindow", "I I", nullptr));
         playButton->setText(QCoreApplication::translate("MainWindow", ">", nullptr));
         fasterButton->setText(QCoreApplication::translate("MainWindow", ">>", nullptr));
+        randomButton->setText(QCoreApplication::translate("MainWindow", "RANDOM", nullptr));
         moveButton->setText(QCoreApplication::translate("MainWindow", "MOVE", nullptr));
         saveButton->setText(QCoreApplication::translate("MainWindow", "SAVE", nullptr));
         loadButton->setText(QCoreApplication::translate("MainWindow", "LOAD", nullptr));

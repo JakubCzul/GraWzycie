@@ -85,3 +85,9 @@ GameOfLifeBoard* MainWindow::getGameBoard() const {
     return gameBoard;
 }
 
+
+void MainWindow::on_randomButton_clicked()
+{
+    gameBoard->random();
+}
+

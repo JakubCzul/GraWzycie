@@ -25,6 +25,7 @@ public slots:
     void stop();
     void faster();
     void updateBoard();
+    void random();
 
 private slots:
     void cellClicked(int row, int column);
