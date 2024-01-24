@@ -11,14 +11,17 @@ CONFIG += c++17
 SOURCES += \
     gameboard.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    oknoStart.cpp
 
 HEADERS += \
     gameboard.h \
-    mainwindow.h
+    mainwindow.h \
+    oknoStart.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    oknoStart.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
