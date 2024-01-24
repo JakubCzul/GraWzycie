@@ -54,6 +54,8 @@ void MainWindow::on_moveButton_clicked()
 {
     gameBoard->updateBoard();
     updateInfoWindow();
+    QDate data = ui->dateActuall->date().addDays(1);
+    ui->dateActuall->setDate(data);
 }
 
 
