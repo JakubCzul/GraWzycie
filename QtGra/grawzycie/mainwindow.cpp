@@ -1,8 +1,6 @@
 #include "mainwindow.h"
 #include "gameboard.h"
 #include "ui_mainwindow.h"
-#include "oknoStart.h"
-#include "ui_oknoStart.h"
 #include <QDateTime>
 #include <QListView>
 #include <QStringListModel>
@@ -13,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    ui->centralwidget->setStyleSheet("background-color: lightblue;");
 
     ui->dateActuall->setDate(QDate::currentDate());
     gameBoard = new GameOfLifeBoard(this);

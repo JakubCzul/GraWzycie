@@ -9,6 +9,8 @@
 GameOfLifeBoard::GameOfLifeBoard(QWidget *parent)
     : QTableWidget(parent), timer(new QTimer(this))
 {
+    setStyleSheet("background-color: white;");
+
     connect(this, &QTableWidget::cellClicked, this, &GameOfLifeBoard::cellClicked);
     connect(timer, &QTimer::timeout, this, &GameOfLifeBoard::play);
     initializeBoard(widthCells,heightCells);

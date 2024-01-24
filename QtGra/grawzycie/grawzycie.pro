@@ -12,16 +12,16 @@ SOURCES += \
     gameboard.cpp \
     main.cpp \
     mainwindow.cpp \
-    oknoStart.cpp
+    windowStart.cpp
 
 HEADERS += \
     gameboard.h \
     mainwindow.h \
-    oknoStart.h
+    windowStart.h
 
 FORMS += \
     mainwindow.ui \
-    oknoStart.ui
+    windowStart.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
