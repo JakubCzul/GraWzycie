@@ -1,4 +1,4 @@
-#include "oknoStart.h""
+#include "oknoStart.h"
 #include "ui_oknoStart.h"
 #include "gameboard.h"
 
@@ -15,12 +15,12 @@ windowStartDialog::~windowStartDialog()
 }
 
 
-int windowStartDialog::getHeight() const{
+int windowStartDialog::getHeight() const {
     return ui->heightSpinBox->value();
 
 }
 
-int windowStartDialog::getWidth() const{
+int windowStartDialog::getWidth() const {
     return ui->widthSpinBox->value();
 }
 
@@ -36,8 +36,7 @@ void windowStartDialog::on_buttonBox_accepted() {
     close();
 }
 
-void windowStartDialog::on_buttonBox_rejected()
-{
+void windowStartDialog::on_buttonBox_rejected() {
     close();
 }
 

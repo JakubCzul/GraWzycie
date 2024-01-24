@@ -1,8 +1,8 @@
 #include "mainwindow.h"
-#include"gameboard.h"
+#include "gameboard.h"
 #include "ui_mainwindow.h"
 #include "oknoStart.h"
-#include"ui_oknoStart.h"
+#include "ui_oknoStart.h"
 #include <QDateTime>
 #include <QListView>
 #include <QStringListModel>
@@ -17,16 +17,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->dateActuall->setDate(QDate::currentDate());
     gameBoard = new GameOfLifeBoard(this);
 
-    // Ustal preferowany rozmiar planszy
     QSize preferredSize(GameOfLifeBoard::width, GameOfLifeBoard::height);
     gameBoard->setMinimumSize(preferredSize);
     gameBoard->setMaximumSize(preferredSize);
 
-    // Ustaw planszę na środku centralwidget
     QVBoxLayout *centralLayout = new QVBoxLayout(ui->centralwidget);
     centralLayout->addWidget(gameBoard, 0, Qt::AlignHCenter | Qt::AlignVCenter);
 
-    // Dodaj margines po lewej stronie (zmień wartość w zależności od preferencji)
     centralLayout->setContentsMargins(0, 0, 400, 0);
     updateInfoWindow();
 }
@@ -36,22 +33,18 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::updateInfoWindow()
-{
-    // Aktualizuj tekst w infoWindow
+void MainWindow::updateInfoWindow() {
     QString infoText = QString(" Current board size: %1 x %2\n\n Population size: %3")
                            .arg(gameBoard->width)
                            .arg(gameBoard->height)
                            .arg(gameBoard->getActiveCellCount());
 
-    // Wyczyść i dodaj nowe elementy do infoWindow
     ui->infoWindow->clear();
     ui->infoWindow->addItem(infoText);
 }
 
 
-void MainWindow::on_moveButton_clicked()
-{
+void MainWindow::on_moveButton_clicked() {
     gameBoard->updateBoard();
     updateInfoWindow();
     QDate data = ui->dateActuall->date().addDays(1);
@@ -59,8 +52,7 @@ void MainWindow::on_moveButton_clicked()
 }
 
 
-void MainWindow::on_playButton_clicked()
-{
+void MainWindow::on_playButton_clicked() {
     gameBoard->play();
 }
 
@@ -86,8 +78,7 @@ GameOfLifeBoard* MainWindow::getGameBoard() const {
 }
 
 
-void MainWindow::on_randomButton_clicked()
-{
+void MainWindow::on_randomButton_clicked() {
     gameBoard->random();
 }
 

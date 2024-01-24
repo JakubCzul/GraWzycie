@@ -341,7 +341,7 @@ release\moc_gameboard.cpp: ..\grawzycie\gameboard.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qrubberband.h \
 		release\moc_predefs.h \
 		C:\Qt\6.3.2\msvc2019_64\bin\moc.exe
-	C:\Qt\6.3.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/kubac/Documents/GitHub/grawZycieTaPrawzdiwa/GrawZycie/QtGra/build-grawzycie-Desktop_Qt_6_3_2_MSVC2019_64bit-Debug/release/moc_predefs.h -IC:/Qt/6.3.2/msvc2019_64/mkspecs/win32-msvc -IC:/Users/kubac/Documents/GitHub/grawZycieTaPrawzdiwa/GrawZycie/QtGra/grawzycie -IC:/Qt/6.3.2/msvc2019_64/include -IC:/Qt/6.3.2/msvc2019_64/include/QtWidgets -IC:/Qt/6.3.2/msvc2019_64/include/QtGui -IC:/Qt/6.3.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" ..\grawzycie\gameboard.h -o release\moc_gameboard.cpp
+	C:\Qt\6.3.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/pbist/OneDrive/Dokumenty/GitHub/GrawZycie/QtGra/build-grawzycie-Desktop_Qt_6_3_2_MSVC2019_64bit-Debug/release/moc_predefs.h -IC:/Qt/6.3.2/msvc2019_64/mkspecs/win32-msvc -IC:/Users/pbist/OneDrive/Dokumenty/GitHub/GrawZycie/QtGra/grawzycie -IC:/Qt/6.3.2/msvc2019_64/include -IC:/Qt/6.3.2/msvc2019_64/include/QtWidgets -IC:/Qt/6.3.2/msvc2019_64/include/QtGui -IC:/Qt/6.3.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" ..\grawzycie\gameboard.h -o release\moc_gameboard.cpp
 
 release\moc_mainwindow.cpp: ..\grawzycie\mainwindow.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QMainWindow \
@@ -500,7 +500,7 @@ release\moc_mainwindow.cpp: ..\grawzycie\mainwindow.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qrubberband.h \
 		release\moc_predefs.h \
 		C:\Qt\6.3.2\msvc2019_64\bin\moc.exe
-	C:\Qt\6.3.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/kubac/Documents/GitHub/grawZycieTaPrawzdiwa/GrawZycie/QtGra/build-grawzycie-Desktop_Qt_6_3_2_MSVC2019_64bit-Debug/release/moc_predefs.h -IC:/Qt/6.3.2/msvc2019_64/mkspecs/win32-msvc -IC:/Users/kubac/Documents/GitHub/grawZycieTaPrawzdiwa/GrawZycie/QtGra/grawzycie -IC:/Qt/6.3.2/msvc2019_64/include -IC:/Qt/6.3.2/msvc2019_64/include/QtWidgets -IC:/Qt/6.3.2/msvc2019_64/include/QtGui -IC:/Qt/6.3.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" ..\grawzycie\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\6.3.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/pbist/OneDrive/Dokumenty/GitHub/GrawZycie/QtGra/build-grawzycie-Desktop_Qt_6_3_2_MSVC2019_64bit-Debug/release/moc_predefs.h -IC:/Qt/6.3.2/msvc2019_64/mkspecs/win32-msvc -IC:/Users/pbist/OneDrive/Dokumenty/GitHub/GrawZycie/QtGra/grawzycie -IC:/Qt/6.3.2/msvc2019_64/include -IC:/Qt/6.3.2/msvc2019_64/include/QtWidgets -IC:/Qt/6.3.2/msvc2019_64/include/QtGui -IC:/Qt/6.3.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" ..\grawzycie\mainwindow.h -o release\moc_mainwindow.cpp
 
 release\moc_oknoStart.cpp: ..\grawzycie\oknoStart.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QDialog \
@@ -638,7 +638,7 @@ release\moc_oknoStart.cpp: ..\grawzycie\oknoStart.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtCore\qnativeinterface.h \
 		release\moc_predefs.h \
 		C:\Qt\6.3.2\msvc2019_64\bin\moc.exe
-	C:\Qt\6.3.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/kubac/Documents/GitHub/grawZycieTaPrawzdiwa/GrawZycie/QtGra/build-grawzycie-Desktop_Qt_6_3_2_MSVC2019_64bit-Debug/release/moc_predefs.h -IC:/Qt/6.3.2/msvc2019_64/mkspecs/win32-msvc -IC:/Users/kubac/Documents/GitHub/grawZycieTaPrawzdiwa/GrawZycie/QtGra/grawzycie -IC:/Qt/6.3.2/msvc2019_64/include -IC:/Qt/6.3.2/msvc2019_64/include/QtWidgets -IC:/Qt/6.3.2/msvc2019_64/include/QtGui -IC:/Qt/6.3.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" ..\grawzycie\oknoStart.h -o release\moc_oknoStart.cpp
+	C:\Qt\6.3.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/pbist/OneDrive/Dokumenty/GitHub/GrawZycie/QtGra/build-grawzycie-Desktop_Qt_6_3_2_MSVC2019_64bit-Debug/release/moc_predefs.h -IC:/Qt/6.3.2/msvc2019_64/mkspecs/win32-msvc -IC:/Users/pbist/OneDrive/Dokumenty/GitHub/GrawZycie/QtGra/grawzycie -IC:/Qt/6.3.2/msvc2019_64/include -IC:/Qt/6.3.2/msvc2019_64/include/QtWidgets -IC:/Qt/6.3.2/msvc2019_64/include/QtGui -IC:/Qt/6.3.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" ..\grawzycie\oknoStart.h -o release\moc_oknoStart.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -985,6 +985,9 @@ release\main.obj: ..\grawzycie\main.cpp ..\grawzycie\mainwindow.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qstyle.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qtabbar.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qrubberband.h \
+		..\grawzycie\oknoStart.h \
+		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QDialog \
+		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qdialog.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QApplication \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qapplication.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtCore\qcoreapplication.h \
@@ -1208,6 +1211,15 @@ release\mainwindow.obj: ..\grawzycie\mainwindow.cpp ..\grawzycie\mainwindow.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qstatusbar.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\grawzycie\oknoStart.h \
+		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QDialog \
+		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qdialog.h \
+		ui_oknoStart.h \
+		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QAbstractButton \
+		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QDialogButtonBox \
+		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qdialogbuttonbox.h \
+		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qspinbox.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtCore\QDateTime \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QListView \
 		C:\Qt\6.3.2\msvc2019_64\include\QtCore\QStringListModel \
@@ -1217,8 +1229,7 @@ release\mainwindow.obj: ..\grawzycie\mainwindow.cpp ..\grawzycie\mainwindow.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtCore\qdir.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtCore\qfile.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtCore\qfiledevice.h \
-		C:\Qt\6.3.2\msvc2019_64\include\QtCore\qfileinfo.h \
-		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\qdialog.h
+		C:\Qt\6.3.2\msvc2019_64\include\QtCore\qfileinfo.h
 
 release\oknoStart.obj: ..\grawzycie\oknoStart.cpp ..\grawzycie\oknoStart.h \
 		C:\Qt\6.3.2\msvc2019_64\include\QtWidgets\QDialog \

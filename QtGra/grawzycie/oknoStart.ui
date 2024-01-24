@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>292</width>
-    <height>198</height>
+    <width>334</width>
+    <height>189</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,26 +32,26 @@
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>20</y>
-     <width>251</width>
+     <width>321</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Prosze podaj rozmiar planszy. (min 3 max 20)</string>
+    <string>Prosze podaj rozmiar planszy. (min 3 max 20):</string>
    </property>
    <property name="readOnly">
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>60</y>
-     <width>42</width>
-     <height>58</height>
+     <width>50</width>
+     <height>67</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -77,13 +77,13 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>60</y>
      <width>110</width>
-     <height>56</height>
+     <height>65</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">

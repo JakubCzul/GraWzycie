@@ -26,11 +26,11 @@ class Ui_windowStartDialog
 public:
     QDialogButtonBox *buttonBox;
     QLineEdit *lineEdit;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QSpinBox *heightSpinBox;
     QSpinBox *widthSpinBox;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_2;
     QLineEdit *lineEdit_2;
     QLineEdit *lineEdit_3;
@@ -39,7 +39,7 @@ public:
     {
         if (windowStartDialog->objectName().isEmpty())
             windowStartDialog->setObjectName(QString::fromUtf8("windowStartDialog"));
-        windowStartDialog->resize(292, 198);
+        windowStartDialog->resize(334, 189);
         buttonBox = new QDialogButtonBox(windowStartDialog);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
         buttonBox->setGeometry(QRect(-60, 140, 341, 32));
@@ -47,41 +47,41 @@ public:
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         lineEdit = new QLineEdit(windowStartDialog);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(20, 20, 251, 24));
+        lineEdit->setGeometry(QRect(10, 20, 321, 24));
         lineEdit->setReadOnly(true);
-        widget = new QWidget(windowStartDialog);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(150, 60, 42, 58));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(windowStartDialog);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(150, 60, 50, 67));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        heightSpinBox = new QSpinBox(widget);
+        heightSpinBox = new QSpinBox(layoutWidget);
         heightSpinBox->setObjectName(QString::fromUtf8("heightSpinBox"));
         heightSpinBox->setMinimum(3);
         heightSpinBox->setMaximum(20);
 
         verticalLayout->addWidget(heightSpinBox);
 
-        widthSpinBox = new QSpinBox(widget);
+        widthSpinBox = new QSpinBox(layoutWidget);
         widthSpinBox->setObjectName(QString::fromUtf8("widthSpinBox"));
         widthSpinBox->setMinimum(3);
         widthSpinBox->setMaximum(20);
 
         verticalLayout->addWidget(widthSpinBox);
 
-        widget1 = new QWidget(windowStartDialog);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(20, 60, 110, 56));
-        verticalLayout_2 = new QVBoxLayout(widget1);
+        layoutWidget1 = new QWidget(windowStartDialog);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(20, 60, 110, 65));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        lineEdit_2 = new QLineEdit(widget1);
+        lineEdit_2 = new QLineEdit(layoutWidget1);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
         lineEdit_2->setReadOnly(true);
 
         verticalLayout_2->addWidget(lineEdit_2);
 
-        lineEdit_3 = new QLineEdit(widget1);
+        lineEdit_3 = new QLineEdit(layoutWidget1);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
         lineEdit_3->setReadOnly(true);
 
@@ -98,7 +98,7 @@ public:
     void retranslateUi(QDialog *windowStartDialog)
     {
         windowStartDialog->setWindowTitle(QCoreApplication::translate("windowStartDialog", "Dialog", nullptr));
-        lineEdit->setText(QCoreApplication::translate("windowStartDialog", "Prosze podaj rozmiar planszy. (min 3 max 20)", nullptr));
+        lineEdit->setText(QCoreApplication::translate("windowStartDialog", "Prosze podaj rozmiar planszy. (min 3 max 20):", nullptr));
         lineEdit_2->setText(QCoreApplication::translate("windowStartDialog", "Wysoko\305\233\304\207", nullptr));
         lineEdit_3->setText(QCoreApplication::translate("windowStartDialog", "Szeroko\305\233\304\207", nullptr));
     } // retranslateUi

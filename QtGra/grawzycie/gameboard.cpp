@@ -5,7 +5,6 @@
 #include <QFile>
 #include <QTextStream>
 #include <time.h>
-#include <iostream>
 
 GameOfLifeBoard::GameOfLifeBoard(QWidget *parent)
     : QTableWidget(parent), timer(new QTimer(this))
@@ -64,15 +63,15 @@ void GameOfLifeBoard::updateBoard() {
         for (int col = 0; col < cols; ++col) {
             int liveNeighbors = countLiveNeighbors(row, col);
 
-            // Zasady gry w życie
+            //zasady gry w życie
             if (item(row, col)->background() == Qt::black) {
                 if (liveNeighbors < 2 || liveNeighbors > 3) {
-                    newBoard[row][col] = 0;  // Zasada 1 i 3
+                    newBoard[row][col] = 0;  //zasada 1 i 3
                 } else {
-                    newBoard[row][col] = 1;  // Zasada 2
+                    newBoard[row][col] = 1;  //zasada 2
                 }
             } else {
-                // Komórka jest nieaktywna (biała)
+                //komórka jest nieaktywna (biała)
                 if (liveNeighbors == 3) {
                     newBoard[row][col] = 1;  // Zasada 4
                 }

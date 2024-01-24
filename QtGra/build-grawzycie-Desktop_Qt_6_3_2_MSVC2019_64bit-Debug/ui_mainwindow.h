@@ -54,7 +54,7 @@ public:
         centralwidget->setAutoFillBackground(true);
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(200, 20, 431, 81));
+        lineEdit->setGeometry(QRect(90, 20, 541, 81));
         QFont font;
         font.setPointSize(48);
         font.setBold(true);
