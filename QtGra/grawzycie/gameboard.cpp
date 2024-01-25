@@ -65,17 +65,15 @@ void GameOfLifeBoard::updateBoard() {
         for (int col = 0; col < cols; ++col) {
             int liveNeighbors = countLiveNeighbors(row, col);
 
-            //zasady gry w życie
             if (item(row, col)->background() == Qt::black) {
                 if (liveNeighbors < 2 || liveNeighbors > 3) {
-                    newBoard[row][col] = 0;  //zasada 1 i 3
+                    newBoard[row][col] = 0;
                 } else {
-                    newBoard[row][col] = 1;  //zasada 2
+                    newBoard[row][col] = 1;
                 }
             } else {
-                //komórka jest nieaktywna (biała)
                 if (liveNeighbors == 3) {
-                    newBoard[row][col] = 1;  // Zasada 4
+                    newBoard[row][col] = 1;
                 }
             }
         }
