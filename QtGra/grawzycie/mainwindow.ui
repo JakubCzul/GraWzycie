@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1312</width>
-    <height>750</height>
+    <width>1123</width>
+    <height>736</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,116 +20,307 @@
    <property name="autoFillBackground">
     <bool>true</bool>
    </property>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>20</y>
-      <width>541</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>48</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>GAME OF LIFE</string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>1040</x>
-      <y>20</y>
-      <width>260</width>
-      <height>271</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QDateEdit" name="dateActuall"/>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="stopButton">
-         <property name="text">
-          <string>I I</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="playButton">
-         <property name="text">
-          <string>&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="fasterButton">
-         <property name="text">
-          <string>&gt;&gt;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QPushButton" name="randomButton">
-         <property name="text">
-          <string>RANDOM</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="moveButton">
-         <property name="text">
-          <string>MOVE</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="saveButton">
-         <property name="text">
-          <string>SAVE</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="loadButton">
-         <property name="text">
-          <string>LOAD</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QListWidget" name="infoWindow">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>600</y>
-      <width>661</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <widget class="QGraphicsView" name="boardObject">
+      <property name="minimumSize">
+       <size>
+        <width>450</width>
+        <height>450</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="maximumSize">
+           <size>
+            <width>450</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>40</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>GAME OF LIFE</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="infoWindow">
+          <property name="maximumSize">
+           <size>
+            <width>450</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="isWrapping" stdset="0">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="leftMargin">
+           <number>32</number>
+          </property>
+          <item>
+           <widget class="QDateEdit" name="dateActuall">
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="rightMargin">
+             <number>24</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="stopButton">
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>I I</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="playButton">
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="fasterButton">
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&gt;&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="randomButton">
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>RANDOM</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="moveButton">
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>MOVE</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="saveButton">
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>SAVE</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="loadButton">
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>LOAD</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLineEdit" name="lineEditSize">
+              <property name="maximumSize">
+               <size>
+                <width>220</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Prosze podaj rozmiar planszy:</string>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <widget class="QLineEdit" name="lineEditWidth">
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Szerokość</string>
+                    </property>
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QSpinBox" name="widthSpinBox">
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="minimum">
+                     <number>3</number>
+                    </property>
+                    <property name="maximum">
+                     <number>20</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QLineEdit" name="lineEditHeight">
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Wysokość</string>
+                    </property>
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QSpinBox" name="heightSpinBox">
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="minimum">
+                     <number>3</number>
+                    </property>
+                    <property name="maximum">
+                     <number>20</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QPushButton" name="startButton">
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Start</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

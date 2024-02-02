@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSpinBox>
 #include "gameboard.h"
 
 QT_BEGIN_NAMESPACE
@@ -16,6 +17,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     GameOfLifeBoard* getGameBoard() const;
+    QSpinBox* getWidthSpinBox() const;
+    QSpinBox* getHeightSpinBox() const;
+
 
 private slots:
     void on_moveButton_clicked();
@@ -23,6 +27,7 @@ private slots:
     void on_saveButton_clicked();
     void on_loadButton_clicked();
     void on_randomButton_clicked();
+    void on_startButton_clicked();
 
 private:
     Ui::MainWindow *ui;

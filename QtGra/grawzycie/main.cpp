@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include "windowStart.h"
 #include "gameboard.h"
 
 #include <QApplication>
@@ -7,18 +6,13 @@
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
-    windowStartDialog win;
-    if (win.exec() == QDialog::Rejected) {
-        return 0;
-    }
-
-    int width = win.getWidth();
-    int height = win.getHeight();
-
     MainWindow w;
+
+    int width = w.getWidthSpinBox()->value();
+    int height = w.getHeightSpinBox()->value();
+
     w.getGameBoard()->setBoardSize(width, height);
     w.show();
-
 
     return a.exec();
 }

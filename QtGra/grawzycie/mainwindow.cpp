@@ -12,10 +12,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    ui->centralwidget->setStyleSheet("background-color: lightblue;");
-
     ui->dateActuall->setDate(QDate::currentDate());
     gameBoard = new GameOfLifeBoard(this);
+
+    connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::on_startButton_clicked);
 
     QSize preferredSize(GameOfLifeBoard::width, GameOfLifeBoard::height);
     gameBoard->setMinimumSize(preferredSize);
@@ -24,8 +24,10 @@ MainWindow::MainWindow(QWidget *parent)
     QVBoxLayout *centralLayout = new QVBoxLayout(ui->centralwidget);
     centralLayout->addWidget(gameBoard, 0, Qt::AlignHCenter | Qt::AlignVCenter);
 
-    centralLayout->setContentsMargins(0, 0, 400, 0);
+    centralLayout->setContentsMargins(0, 0, 0, 400);
     updateInfoWindow();
+
+
 }
 
 MainWindow::~MainWindow()
@@ -82,3 +84,19 @@ void MainWindow::on_randomButton_clicked() {
     gameBoard->random();
 }
 
+
+void MainWindow::on_startButton_clicked() {
+    int width = ui->widthSpinBox->value();
+    int height = ui->heightSpinBox->value();
+
+    gameBoard->setBoardSize(width, height);
+    updateInfoWindow();
+}
+
+QSpinBox* MainWindow::getWidthSpinBox() const {
+    return ui->widthSpinBox;
+}
+
+QSpinBox* MainWindow::getHeightSpinBox() const {
+    return ui->heightSpinBox;
+}
