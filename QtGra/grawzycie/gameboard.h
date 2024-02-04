@@ -1,9 +1,13 @@
 #ifndef GAMEBOARD_H
 #define GAMEBOARD_H
 
-#include <QTableWidget>
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QTimer>
+#include <QGraphicsRectItem>
 
-class GameOfLifeBoard : public QTableWidget {
+class GameOfLifeBoard : public QGraphicsView
+{
     Q_OBJECT
 
 public:
@@ -20,19 +24,18 @@ public:
     void setBoardSize(int width, int height);
 
 public slots:
-    void initializeBoard(int Width,int Height);
+    void initializeBoard(int width, int height);
     void play();
     void stop();
     void faster();
     void updateBoard();
     void random();
 
-private slots:
-    void cellClicked(int row, int column);
-
 private:
     int countLiveNeighbors(int row, int column);
     QTimer *timer;
+    QGraphicsScene *scene;
+
 signals:
     void gameSaved();
 };
