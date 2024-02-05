@@ -13,18 +13,17 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     ui->dateActuall->setDate(QDate::currentDate());
-    gameBoard = new GameOfLifeBoard(this);
+    gameBoard = new GameOfLifeBoard(ui->boardObject);
+
+    // Pobierz wielkość widgetu boardObject
+    QSize boardSize = ui->boardObject->size();
+    // Ustaw wielkość planszy
+    gameBoard->setMinimumSize(boardSize);
+    gameBoard->setBoardSize(boardSize.width(), boardSize.height());
 
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::on_startButton_clicked);
 
-    QSize preferredSize(GameOfLifeBoard::width, GameOfLifeBoard::height);
-    gameBoard->setMinimumSize(preferredSize);
-    gameBoard->setMaximumSize(preferredSize);
 
-    QVBoxLayout *centralLayout = new QVBoxLayout(ui->centralwidget);
-    centralLayout->addWidget(gameBoard, 0, Qt::AlignHCenter | Qt::AlignVCenter);
-
-    centralLayout->setContentsMargins(0, 0, 0, 400);
     updateInfoWindow();
 
 

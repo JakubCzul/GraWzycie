@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1123</width>
-    <height>736</height>
+    <width>921</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,11 +22,17 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_7">
     <item>
-     <widget class="QGraphicsView" name="boardObject">
+     <widget class="QTableWidget" name="boardObject">
       <property name="minimumSize">
        <size>
-        <width>450</width>
+        <width>900</width>
         <height>450</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>3599</width>
+        <height>3600</height>
        </size>
       </property>
      </widget>
