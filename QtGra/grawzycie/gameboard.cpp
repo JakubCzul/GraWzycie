@@ -47,7 +47,7 @@ void GameOfLifeBoard::setBoardSize(int width, int height) {
 void GameOfLifeBoard::faster() {
     int interval = timer->interval();
     if (interval > 50) {
-        timer->setInterval(interval - 50);
+        timer->setInterval(interval - 500);
     }
 }
 
@@ -85,6 +85,9 @@ void GameOfLifeBoard::updateBoard() {
             item->setBackground(newBoard[row][col] == 1 ? Qt::black : Qt::white);
         }
     }
+
+    emit dateUpdated();
+    emit populationSizeChanged();
 }
 
 int GameOfLifeBoard::countLiveNeighbors(int row, int column) {
@@ -124,8 +127,6 @@ void GameOfLifeBoard::saveGame(const QString &fileName) {
     QFile file(fileName);
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream out(&file);
-
-        out<< width << " " <<height <<"\n";
 
         for (int row = 0; row < rowCount(); row++) {
             for (int col = 0; col < columnCount(); col++) {

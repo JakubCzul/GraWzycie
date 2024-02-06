@@ -9,6 +9,7 @@
 #include <QStringListModel>
 #include <QListWidget>
 #include <QFileDialog>
+#include <QDate>
 #include "gameboard.h"
 
 QT_BEGIN_NAMESPACE
@@ -34,6 +35,7 @@ private slots:
     void on_loadButton_clicked();
     void on_randomButton_clicked();
     void on_startButton_clicked();
+    void on_stopButton_clicked();
 
 private:
     Ui::MainWindow *ui;

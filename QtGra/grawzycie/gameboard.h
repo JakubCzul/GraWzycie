@@ -14,13 +14,9 @@ class GameOfLifeBoard : public QTableWidget {
 public:
     GameOfLifeBoard(QWidget *parent = nullptr);
     int getActiveCellCount() const;
-    int width;
-    int height;
     void saveGame(const QString &fileName);
     void loadGame(const QString &fileName);
     void setBoardSize(int width, int height);
-    void setWidth(int Width){width = Width;}
-    void setHeight(int Height){height = Height;}
     void setColumnWidthsAndHeights(int cellWidth, int cellHeight);
 
 public slots:
@@ -44,6 +40,8 @@ private:
     QTimer *timer;
 signals:
     void gameSaved();
+    void dateUpdated();
+    void populationSizeChanged();
 
 protected:
     void resizeEvent(QResizeEvent *event) override;

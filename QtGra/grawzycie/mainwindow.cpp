@@ -14,6 +14,16 @@ MainWindow::MainWindow(QWidget *parent)
     gameBoard->setBoardSize(boardSize.width(), boardSize.height());
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::on_startButton_clicked);
     updateInfoWindow();
+
+    connect(gameBoard, &GameOfLifeBoard::dateUpdated, this, [this]() {
+        QDate currentDate = ui->dateActuall->date();
+        currentDate = currentDate.addDays(1);
+        ui->dateActuall->setDate(currentDate);
+    });
+
+    connect(ui->stopButton, &QPushButton::clicked, this, &MainWindow::on_stopButton_clicked);
+    connect(gameBoard, &GameOfLifeBoard::gameSaved, this, &MainWindow::updateInfoWindow);
+    connect(gameBoard, &GameOfLifeBoard::populationSizeChanged, this, &MainWindow::updateInfoWindow);
 }
 
 MainWindow::~MainWindow()
@@ -23,14 +33,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::updateInfoWindow() {
     QString infoText = QString(" Current board size: %1 x %2\n\n Population size: %3")
-                           .arg(gameBoard->width)
-                           .arg(gameBoard->height)
+                           .arg(ui->widthSpinBox->value())
+                           .arg(ui->heightSpinBox->value())
                            .arg(gameBoard->getActiveCellCount());
 
     ui->infoWindow->clear();
     ui->infoWindow->addItem(infoText);
 }
-
 
 void MainWindow::on_moveButton_clicked() {
     gameBoard->updateBoard();
@@ -92,5 +101,9 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
     QMainWindow::resizeEvent(event);
     QSize boardSize = ui->boardObject->size();
     gameBoard->setColumnWidthsAndHeights(boardSize.width() / gameBoard->columnCount(), boardSize.height() / gameBoard->rowCount());
+}
+
+void MainWindow::on_stopButton_clicked() {
+    gameBoard->stop();
 }
 
