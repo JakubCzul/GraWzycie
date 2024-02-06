@@ -87,3 +87,10 @@ QSpinBox* MainWindow::getWidthSpinBox() const {
 QSpinBox* MainWindow::getHeightSpinBox() const {
     return ui->heightSpinBox;
 }
+
+void MainWindow::resizeEvent(QResizeEvent *event) {
+    QMainWindow::resizeEvent(event);
+    QSize boardSize = ui->boardObject->size();
+    gameBoard->setColumnWidthsAndHeights(boardSize.width() / gameBoard->columnCount(), boardSize.height() / gameBoard->rowCount());
+}
+

@@ -8,6 +8,11 @@ GameOfLifeBoard::GameOfLifeBoard(QWidget *parent)
 
     connect(this, &QTableWidget::cellClicked, this, &GameOfLifeBoard::cellClicked);
     connect(timer, &QTimer::timeout, this, &GameOfLifeBoard::play);
+
+    QSize boardSize = viewport()->size();
+    widthCells = boardSize.width() / CellsWidth;
+    heightCells = boardSize.height() / CellsHeight;
+
     initializeBoard(widthCells,heightCells);
 }
 
@@ -186,3 +191,19 @@ void GameOfLifeBoard::random(){
         }
     }
 }
+
+void GameOfLifeBoard::resizeEvent(QResizeEvent *event) {
+    QTableWidget::resizeEvent(event);
+    QSize boardSize = viewport()->size();
+    int cellWidth = boardSize.width() / columnCount();
+    int cellHeight = boardSize.height() / rowCount();
+    setColumnWidthsAndHeights(cellWidth, cellHeight);
+}
+
+void GameOfLifeBoard::setColumnWidthsAndHeights(int cellWidth, int cellHeight) {
+    for (int col = 0; col < columnCount(); ++col)
+        setColumnWidth(col, cellWidth);
+    for (int row = 0; row < rowCount(); ++row)
+        setRowHeight(row, cellHeight);
+}
+

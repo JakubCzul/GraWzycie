@@ -40,5 +40,8 @@ private:
     GameOfLifeBoard *gameBoard;
     void updateInfoWindow();
 
+protected:
+    void resizeEvent(QResizeEvent *event) override;
+
 };
 #endif

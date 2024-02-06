@@ -22,7 +22,7 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_GameOfLifeBoard_t {
-    uint offsetsAndSizes[22];
+    uint offsetsAndSizes[28];
     char stringdata0[16];
     char stringdata1[10];
     char stringdata2[1];
@@ -34,6 +34,9 @@ struct qt_meta_stringdata_GameOfLifeBoard_t {
     char stringdata8[7];
     char stringdata9[12];
     char stringdata10[7];
+    char stringdata11[12];
+    char stringdata12[4];
+    char stringdata13[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_GameOfLifeBoard_t::offsetsAndSizes) + ofs), len 
@@ -49,7 +52,10 @@ static const qt_meta_stringdata_GameOfLifeBoard_t qt_meta_stringdata_GameOfLifeB
         QT_MOC_LITERAL(61, 4),  // "stop"
         QT_MOC_LITERAL(66, 6),  // "faster"
         QT_MOC_LITERAL(73, 11),  // "updateBoard"
-        QT_MOC_LITERAL(85, 6)   // "random"
+        QT_MOC_LITERAL(85, 6),  // "random"
+        QT_MOC_LITERAL(92, 11),  // "cellClicked"
+        QT_MOC_LITERAL(104, 3),  // "row"
+        QT_MOC_LITERAL(108, 6)   // "column"
     },
     "GameOfLifeBoard",
     "gameSaved",
@@ -61,7 +67,10 @@ static const qt_meta_stringdata_GameOfLifeBoard_t qt_meta_stringdata_GameOfLifeB
     "stop",
     "faster",
     "updateBoard",
-    "random"
+    "random",
+    "cellClicked",
+    "row",
+    "column"
 };
 #undef QT_MOC_LITERAL
 
@@ -71,7 +80,7 @@ static const uint qt_meta_data_GameOfLifeBoard[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,15 +88,16 @@ static const uint qt_meta_data_GameOfLifeBoard[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   56,    2, 0x06,    1 /* Public */,
+       1,    0,   62,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    2,   57,    2, 0x0a,    2 /* Public */,
-       6,    0,   62,    2, 0x0a,    5 /* Public */,
-       7,    0,   63,    2, 0x0a,    6 /* Public */,
-       8,    0,   64,    2, 0x0a,    7 /* Public */,
-       9,    0,   65,    2, 0x0a,    8 /* Public */,
-      10,    0,   66,    2, 0x0a,    9 /* Public */,
+       3,    2,   63,    2, 0x0a,    2 /* Public */,
+       6,    0,   68,    2, 0x0a,    5 /* Public */,
+       7,    0,   69,    2, 0x0a,    6 /* Public */,
+       8,    0,   70,    2, 0x0a,    7 /* Public */,
+       9,    0,   71,    2, 0x0a,    8 /* Public */,
+      10,    0,   72,    2, 0x0a,    9 /* Public */,
+      11,    2,   73,    2, 0x08,   10 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -99,6 +109,7 @@ static const uint qt_meta_data_GameOfLifeBoard[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   12,   13,
 
        0        // eod
 };
@@ -116,6 +127,7 @@ void GameOfLifeBoard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 4: _t->faster(); break;
         case 5: _t->updateBoard(); break;
         case 6: _t->random(); break;
+        case 7: _t->cellClicked((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -131,14 +143,14 @@ void GameOfLifeBoard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
 }
 
 const QMetaObject GameOfLifeBoard::staticMetaObject = { {
-    QMetaObject::SuperData::link<QGraphicsView::staticMetaObject>(),
+    QMetaObject::SuperData::link<QTableWidget::staticMetaObject>(),
     qt_meta_stringdata_GameOfLifeBoard.offsetsAndSizes,
     qt_meta_data_GameOfLifeBoard,
     qt_static_metacall,
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_GameOfLifeBoard_t
 , QtPrivate::TypeAndForceComplete<GameOfLifeBoard, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
 
 
 >,
@@ -156,22 +168,22 @@ void *GameOfLifeBoard::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_GameOfLifeBoard.stringdata0))
         return static_cast<void*>(this);
-    return QGraphicsView::qt_metacast(_clname);
+    return QTableWidget::qt_metacast(_clname);
 }
 
 int GameOfLifeBoard::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QGraphicsView::qt_metacall(_c, _id, _a);
+    _id = QTableWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
 }

@@ -8,7 +8,6 @@
 #include <QDebug>
 #include <QFile>
 #include <QTextStream>
-#include <time.h>
 class GameOfLifeBoard : public QTableWidget {
     Q_OBJECT
 
@@ -22,6 +21,7 @@ public:
     void setBoardSize(int width, int height);
     void setWidth(int Width){width = Width;}
     void setHeight(int Height){height = Height;}
+    void setColumnWidthsAndHeights(int cellWidth, int cellHeight);
 
 public slots:
     void initializeBoard(int width, int height);
@@ -44,6 +44,9 @@ private:
     QTimer *timer;
 signals:
     void gameSaved();
+
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 };
 
 #endif // GAMEBOARD_H

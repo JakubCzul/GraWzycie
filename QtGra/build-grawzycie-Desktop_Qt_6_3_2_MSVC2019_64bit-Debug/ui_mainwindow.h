@@ -12,14 +12,15 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDateEdit>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -30,7 +31,7 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout_7;
-    QGraphicsView *boardObject;
+    QTableWidget *boardObject;
     QHBoxLayout *horizontalLayout_7;
     QVBoxLayout *verticalLayout_5;
     QLineEdit *lineEdit;
@@ -65,16 +66,17 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1123, 736);
+        MainWindow->resize(921, 690);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setLayoutDirection(Qt::LeftToRight);
         centralwidget->setAutoFillBackground(true);
         verticalLayout_7 = new QVBoxLayout(centralwidget);
         verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
-        boardObject = new QGraphicsView(centralwidget);
+        boardObject = new QTableWidget(centralwidget);
         boardObject->setObjectName(QString::fromUtf8("boardObject"));
-        boardObject->setMinimumSize(QSize(450, 450));
+        boardObject->setMinimumSize(QSize(900, 450));
+        boardObject->setMaximumSize(QSize(3599, 3600));
 
         verticalLayout_7->addWidget(boardObject);
 
