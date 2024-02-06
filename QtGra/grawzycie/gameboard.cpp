@@ -1,10 +1,5 @@
 #include "gameboard.h"
-#include <QTimer>
-#include <QVector>
-#include <QDebug>
-#include <QFile>
-#include <QTextStream>
-#include <time.h>
+
 
 GameOfLifeBoard::GameOfLifeBoard(QWidget *parent)
     : QTableWidget(parent), timer(new QTimer(this))
@@ -19,7 +14,6 @@ GameOfLifeBoard::GameOfLifeBoard(QWidget *parent)
 void GameOfLifeBoard::initializeBoard(int Width,int Height) {
     setRowCount(Height);
     setColumnCount(Width);
-
     for (int row = 0; row < rowCount(); row++) {
         for (int col = 0; col < columnCount(); col++) {
             QTableWidgetItem *item = new QTableWidgetItem();

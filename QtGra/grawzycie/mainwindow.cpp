@@ -1,11 +1,6 @@
 #include "mainwindow.h"
 #include "gameboard.h"
-#include "ui_mainwindow.h"
-#include <QDateTime>
-#include <QListView>
-#include <QStringListModel>
-#include <QListWidget>
-#include <QFileDialog>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -14,19 +9,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->dateActuall->setDate(QDate::currentDate());
     gameBoard = new GameOfLifeBoard(ui->boardObject);
-
-    // Pobierz wielkość widgetu boardObject
     QSize boardSize = ui->boardObject->size();
-    // Ustaw wielkość planszy
     gameBoard->setMinimumSize(boardSize);
     gameBoard->setBoardSize(boardSize.width(), boardSize.height());
-
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::on_startButton_clicked);
-
-
     updateInfoWindow();
-
-
 }
 
 MainWindow::~MainWindow()
@@ -81,6 +68,7 @@ GameOfLifeBoard* MainWindow::getGameBoard() const {
 
 void MainWindow::on_randomButton_clicked() {
     gameBoard->random();
+    this->updateInfoWindow();
 }
 
 

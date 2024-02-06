@@ -3,6 +3,12 @@
 
 #include <QMainWindow>
 #include <QSpinBox>
+#include "ui_mainwindow.h"
+#include <QDateTime>
+#include <QListView>
+#include <QStringListModel>
+#include <QListWidget>
+#include <QFileDialog>
 #include "gameboard.h"
 
 QT_BEGIN_NAMESPACE
