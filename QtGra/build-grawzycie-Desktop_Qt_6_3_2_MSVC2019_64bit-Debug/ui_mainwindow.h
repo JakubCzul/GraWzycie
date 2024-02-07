@@ -66,7 +66,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(921, 690);
+        MainWindow->resize(922, 721);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setLayoutDirection(Qt::LeftToRight);
@@ -267,7 +267,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Gra w \305\274ycie", nullptr));
         lineEdit->setText(QCoreApplication::translate("MainWindow", "GAME OF LIFE", nullptr));
         stopButton->setText(QCoreApplication::translate("MainWindow", "I I", nullptr));
         playButton->setText(QCoreApplication::translate("MainWindow", ">", nullptr));
